@@ -90,7 +90,7 @@ def main():
         saldos = [cliente['saldo'] for cliente in clientes_banco]
         log_sum = sum(math.log(saldo) for saldo in saldos)
         saldo_media_geometrica = math.exp(log_sum / len(saldos))
-        print(f"La media geométrica es: {saldo_media_geometrica}")
+        print(f"La media geométrica es: {saldo_media_geometrica:.2f}")
         print("")
     
     def reporte_saldos():
