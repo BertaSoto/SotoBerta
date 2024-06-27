@@ -94,13 +94,18 @@ def main():
         print("")
     
     def reporte_saldos():
-         with open('reporte_saldos.csv', mode='w', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Nombre", "Saldo"])
-            for cliente in clientes_banco:
-                writer.writerow([cliente['nombre'], cliente['saldo']])
-            print("Reporte de saldos guardado en 'reporte_saldos.csv'")
-            print("")
+            deduccion = float(10)
+            deduccion /= 100
+            with open('reporte_saldos.csv', mode='w', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(["Nombre", "Saldo Neto", "Saldo con Deduccion"])
+                for cliente in clientes_banco:
+                    saldo_neto = cliente['saldo']
+                    saldo_deducido = round(saldo_neto * (1 - deduccion))
+                    writer.writerow([cliente['nombre'], saldo_neto, saldo_deducido])
+                print("Reporte de saldos guardado en 'reporte_saldos.csv'")
+                print("")
+            
     def salir_menu():
         print("Ha salido del programa con exito")
     
