@@ -3,34 +3,34 @@ import math
 import csv
 
 clientes_banco = [
-    {"nombre": "Alma",
+    {"nombre": "Alma Leon",
     "saldo": 200000},
     
-    {"nombre": "Bernardo",
+    {"nombre": "Bernardo Serrano",
     "saldo": 1500000},
     
-    {"nombre": "Claudio",
+    {"nombre": "Claudio Tolosa",
     "saldo": 10000},
     
-    {"nombre": "Diego",
+    {"nombre": "Diego Sanchez",
     "saldo": 500000},
     
-    {"nombre": "Esperanza",
+    {"nombre": "Esperanza Solar",
     "saldo": 3000000},
     
-    {"nombre": "Francisca",
+    {"nombre": "Francisca Osorio",
     "saldo": 200000},
     
-    {"nombre": "Gabriel",
+    {"nombre": "Gabriel Reyes",
     "saldo": 40000000},
     
-    {"nombre": "Hector",
+    {"nombre": "Hector Silva",
     "saldo": 100},
     
-    {"nombre": "Ines",
+    {"nombre": "Ines Poblete",
     "saldo": 60000},
     
-    {"nombre": "Javier",
+    {"nombre": "Javier Lopez",
     "saldo": 600000}
 ]
 
@@ -122,4 +122,3 @@ def main():
             salir_menu()
             break
 main()
-
