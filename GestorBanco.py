@@ -61,16 +61,32 @@ def main():
                 print("Clasificacion: Saldo medio")
             else:
                 print("Clasificacion: Saldo alto")
-                
+    
+    def saldo_mayor():
+        
+        saldo_maximo = max(cliente['saldo'] for cliente in clientes_banco)
+        print(f"El saldo mayor de los clientes es: {saldo_maximo}")
+        
+    def saldo_menor():
+        saldo_minimo = min(cliente['saldo'] for cliente in clientes_banco)
+        print(f"El saldo mínimo entre todos los clientes es: {saldo_minimo}")
+        
+    def saldo_promedio():
+        promedio = [cliente['saldo'] for cliente in clientes_banco]
+        saldo_promedio = statistics.mean(promedio)
+        print(f"El saldo promedio es: {saldo_promedio}")
+    
+    def media_geometrica():
+        
     
     while True:
         opcion = mostrar_menu()
         if opcion == 1:
             clasificacion_datos()
         if opcion == 2:
-            saldo_alto()
+            saldo_mayor()
         if opcion == 3:
-            saldo_bajo()
+            saldo_menor()
         if opcion == 4:
             saldo_promedio()
         if opcion == 5:
